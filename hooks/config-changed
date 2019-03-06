@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+
+import setup
+from os import getloadavg
+setup.pre_install()
+
+from charmhelpers.core import hookenv
+
+
+def config_changed():
+    hookenv.log('Configuration changed')
+    # Do your act on configuration change
+
+if __name__ == "__main__":
+    config_changed()
