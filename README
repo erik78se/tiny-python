@@ -8,8 +8,9 @@ This charm runs only on:
 
 # Usage
 
-charm pull https://jujucharms.com/u/erik-lonroth/tiny-python && juju deploy ./tiny-python
-
+```
+charm pull https://jujucharms.com/new/u/erik-lonroth/tiny-python && juju deploy ./tiny-python
+```
 
 # Configuration
 
