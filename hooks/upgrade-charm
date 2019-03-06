@@ -10,7 +10,7 @@ def upgrade_charm():
     hookenv.log('Upgrading tiny-python')
     hookenv.status_set('maintenance', 'Upgrading charm')
     # Do some upgrade
-    hookenv.status_set('active', 'Upgraded charm')
+    hookenv.status_set('active', 'Upgraded charm ...')
     
 
 if __name__ == "__main__":
