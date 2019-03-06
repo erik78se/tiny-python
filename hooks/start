@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+
+import setup
+setup.pre_install()
+
+from charmhelpers.core import hookenv
+
+
+def start():
+    hookenv.log('Starting tiny-python')
+
+    hookenv.status_set('active', 'Started')
+
+if __name__ == "__main__":
+    start()

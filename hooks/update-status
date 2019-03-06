@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+
+import setup
+from os import getloadavg
+setup.pre_install()
+
+from charmhelpers.core import hookenv
+
+
+def update_status():
+    hookenv.log('Updating status')
+
+    hookenv.status_set('active', "Load: {}".format(str(getloadavg())))
+
+if __name__ == "__main__":
+    update_status()
