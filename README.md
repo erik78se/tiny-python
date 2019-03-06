@@ -17,7 +17,7 @@ This charm is for practice and study only. Its really not very useful for other 
 # Usage
 
 ```
-charm pull https://jujucharms.com/new/u/erik-lonroth/tiny-python && juju deploy ./tiny-python
+charm pull cs:~erik-lonroth/tiny-python  && juju deploy ./tiny-python
 ```
 
 # Configuration
