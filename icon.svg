@@ -64,18 +64,18 @@
      id="layer1"
      inkscape:label="BACKGROUND">
     <g
-       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-opacity:1"
+       style="fill:#44aa00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-opacity:1"
        id="Page-1">
       <g
          id="eclispe-che"
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1">
+         style="fill:#44aa00;fill-opacity:1;stroke:none;stroke-opacity:1">
         <g
            id="path3023-path"
-           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-opacity:1">
+           style="fill:#44aa00;fill-opacity:1;stroke:none;stroke-opacity:1">
           <use
              xlink:href="#path-1"
              id="use9"
-             style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-opacity:1"
+             style="fill:#44aa00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-opacity:1"
              x="0"
              y="0"
              width="100%"
@@ -83,7 +83,7 @@
           <path
              d="M 50.000441,0.5 C 22.662621,0.5 0.5,22.661661 0.5,49.999559 0.5,77.337051 22.663098,99.5 50.000441,99.5 77.337613,99.5 99.5,77.337222 99.5,49.999559 99.5,22.661796 77.337514,0.5 50.000441,0.5 Z"
              id="path11"
-             style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-opacity:1"
+             style="fill:#44aa00;fill-opacity:1;stroke:none;stroke-width:1;stroke-opacity:1"
              inkscape:connector-curvature="0" />
         </g>
       </g>
@@ -91,13 +91,13 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       x="13.771186"
-       y="62.076275"
+       x="9.7457619"
+       y="61.86441"
        id="text97"><tspan
          sodipodi:role="line"
          id="tspan95"
-         x="13.771186"
-         y="62.076275">tiny</tspan></text>
+         x="9.7457619"
+         y="61.86441">Tiny</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
