@@ -1,18 +1,18 @@
 # Overview
 
-A tiny python (non reactive) charm that demonstrates the "hook" concept for Juju.
+A tiny (non reactive) charm that intends to teach about the "hook" concept for Juju.
 
-This charm runs only on:
- * Ubuntu series with python3 (bionic, disco, etc.)
- * Systems with ability to do 'pip install' from network
+See: https://docs.jujucharms.com/2.5/en/reference-charm-hooks
 
 ## What it does
 This charm starts with :
- * installing "python3-pip" in [hooks/setup.py] and 'charmhelpers'
+ * Installs "python3-pip" in [hooks/setup.py] and 'charmhelpers'
 
- * Then goes ahead and acts on the hooks in the hooks directory as part of the juju event cycle.
+ * Acts on the hooks in the hooks directory as part of the juju event cycle.
 
-This charm is for practice and study only. Its really not very useful for other that this.
+This charm is for educational purposes. You can learn about Juju hooks with this.
+
+Check out the 'hooks' directory to learn.
 
 # Usage
 
@@ -24,6 +24,12 @@ charm pull cs:~erik-lonroth/tiny-python  && juju deploy ./tiny-python
 
 None
 
+# Known limitations
+
+Because its a python charm, this charm depends on python3 which limit to:.
+
+ * Ubuntu series bionic, disco where python3 is default.
+ * Systems with ability to do 'pip install' from network
 
 # Contact Information
 

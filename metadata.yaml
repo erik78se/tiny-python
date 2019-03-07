@@ -1,7 +1,5 @@
 name: tiny-python
-summary: A tiny python charm
-description: |
-  Its tiny and runs only with python3 and Ubuntu.
+summary: This charm is so small. Its tiny.
 maintainer: Erik Lonroth <erik.lonroth@gmail.com>
 series: ["bionic", "disco"]
 provides:
@@ -9,6 +7,8 @@ provides:
     interface: ubuntu
 extra-bindings:
   another:
+description: |
+  This charm is for educational purpose to help charmers learn about juju hooks.
 tags:
   - misc
   - application_development
