@@ -1,14 +1,28 @@
 #!/usr/bin/env python3
+#
+# 'install'
+#
+# install is run at the beginning of a charm lifecycle.
+# The hook should be used to perform one-time setup operations,
+# such as installing prerequisite software that will not change
+# with configuration changes.
+# Like all hooks this must be idempotent because there are scenarios
+# where this hook can be run more than once.
 
 import setup
 setup.pre_install()
 
 from charmhelpers.core import hookenv
+import platform
 
 
 def install():
-    hookenv.log('install: tiny-python')
+
+    hookenv.application_version_set(platform.dist()[1]) 
+    
     hookenv.status_set('maintenance', 'Installed, waiting for start')
 
+    hookenv.log('Did some installing', 'INFO')
+    
 if __name__ == "__main__":
     install()

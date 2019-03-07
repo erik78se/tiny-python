@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+#
+# 'leader-settings-changed'
+#
+# leader-settings-changed runs when the leader has set values
+# for the other units to respond to. Much like (config-changed)
+# but for the leaders to send values to other units.
+# Follower units can implement this hook and take action when the
+# leader sets values. For more information read the charm leadership document.
+
+import setup
+setup.pre_install()
+
+from charmhelpers.core import hookenv
+
+
+def leader_settings_changed():
+    # Do your act on configuration change
+    hookenv.log('Follower changed settings as leader communicated.', 'INFO')
+
+
+if __name__ == "__main__":
+    leader_settings_changed()

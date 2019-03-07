@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+#
+# 'leader-elected'
+#
+# leader-elected is run at least once to signify that Juju decided
+# this unit is the leader. Authors can use this hook to take action
+# if their protocols for leadership, consensus, raft, or quorum require
+# one unit to assert leadership. If the election process is done
+# internally to the application, other code should be used to signal
+# the leader to Juju. For more information read the charm leadership document.
+#
+
+import setup
+setup.pre_install()
+
+from charmhelpers.core import hookenv
+
+
+def leader_elected():
+    # Do your act on configuration change
+    hookenv.log('This unit is the leader.', 'INFO')
+
+
+if __name__ == "__main__":
+    leader_elected()

@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+#
+# 'start'
+#
+# start runs immediately after the first config-changed hook.
+# It should be used to ensure the charm's software is running.
+# Note that the charm's software should be configured so as to
+# persist through reboots without further intervention on juju's part.
 
 import setup
 setup.pre_install()
@@ -7,9 +14,8 @@ from charmhelpers.core import hookenv
 
 
 def start():
-    hookenv.log('Starting tiny-python')
 
-    hookenv.status_set('active', 'Started')
+    hookenv.status_set('active', 'Started tiny-python')
 
 if __name__ == "__main__":
     start()
