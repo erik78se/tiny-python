@@ -17,7 +17,7 @@ import datetime
 
 def update_status():
     now = datetime.datetime.now()
-    hookenv.status_set('active', "update-status: {}".format( str( now.strftime("%H:%M") ) ))
+    hookenv.status_set('active', "update-status ran: {}".format( str( now.strftime("%H:%M") ) ))
 
 if __name__ == "__main__":
     update_status()
