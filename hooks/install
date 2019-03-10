@@ -13,12 +13,9 @@ import setup
 setup.pre_install()
 
 from charmhelpers.core import hookenv
-import platform
 
 
 def install():
-
-    hookenv.application_version_set(platform.dist()[1]) 
     
     hookenv.status_set('maintenance', 'Installed, waiting for start')
 
