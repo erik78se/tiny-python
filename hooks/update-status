@@ -9,15 +9,15 @@
 # the “health” of the service or services.
 
 import setup
-from os import getloadavg
 setup.pre_install()
-
 from charmhelpers.core import hookenv
+import datetime
 
+# from os import getloadavg
 
 def update_status():
-
-    hookenv.status_set('active', "Load: {}".format(str(getloadavg())))
+    now = datetime.datetime.now()
+    hookenv.status_set('active', "update-status: {}".format( str( now.strftime("%H:%M") ) ))
 
 if __name__ == "__main__":
     update_status()
