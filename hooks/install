@@ -3,23 +3,31 @@
 # 'install'
 #
 # install is run at the beginning of a charm lifecycle.
-# The hook should be used to perform one-time setup operations,
-# such as installing prerequisite software that will not change
-# with configuration changes.
-# Like all hooks this must be idempotent because there are scenarios
-# where this hook can be run more than once.
-
+# The hook should be used to perform one-time setup operation.
 import setup
-setup.pre_install()
+import os
 
+#######################################
+# Install "charmhelpers" which makes
+# charing easier.
+#######################################
+setup.pre_install()
 from charmhelpers.core import hookenv
 
 
+
+#######################################
+# Run the install procedure
+#######################################
 def install():
+
+    unitName = os.environ["JUJU_UNIT_NAME"]
     
     hookenv.status_set('maintenance', 'Installed, waiting for start')
 
-    hookenv.log('Did some installing', 'INFO')
+    hookenv.log("Ran install for: %s" % unitName, 'INFO')
+
+    
     
 if __name__ == "__main__":
     install()
