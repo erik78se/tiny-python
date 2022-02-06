@@ -1,8 +1,9 @@
 # Overview
 
-A tiny (non reactive) charm that intends to teach about the "hook" concept for Juju.
+The tiny-python charm that use "hooks only" to deploy. Since its super small and only uses hooks, it deploys very fast.
 
-See: https://docs.jujucharms.com/2.5/en/reference-charm-hooks
+It depends on the "charmhelpers" library which is helpful when writing charms with python.
+
 
 ## What it does
 This charm starts with :
@@ -10,23 +11,31 @@ This charm starts with :
 
  * Acts on the hooks in the hooks directory as part of the juju event cycle.
 
-This charm is for educational purposes. You can learn about Juju hooks with this.
-
 Check out the 'hooks' directory to learn.
 
-# Usage
+## Deploy from charmhub
 
-```
-charm pull cs:~erik-lonroth/tiny-python  && juju deploy ./tiny-python
-```
+    juju deploy tiny-python
 
-# Configuration
+## Deploy from  development host
 
-None
+Hook-only charms doesn't need to be built, so you can deploy straight from the directory:
 
-# Known limitations
+    git clone git@github.com:erik78se/tiny-python.git
+    juju deploy ./tiny-python
 
-Because its a python charm, this charm depends on python3 which limit to:.
+## Build the charm
+
+You can build the charm if you like with charmcraft:
+
+    git clone git@github.com:erik78se/tiny-python.git
+        charmcraft build
+    juju deploy ./tiny-python.charm
+
+
+## Known limitations
+
+Because its a python charm, this charm depends on python3 which limit to:
 
  * Ubuntu series bionic, disco where python3 is default.
  * Systems with ability to do 'pip install' from network
